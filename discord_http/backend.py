@@ -73,6 +73,7 @@ class DiscordHTTP(Quart):
         self.debug_events = self.bot.debug_events
 
         super().__init__(__name__)
+        self.config["PROVIDE_AUTOMATIC_OPTIONS"] = True
 
         # Remove Quart's default logging handler
         _quart_log = logging.getLogger("quart.app")
